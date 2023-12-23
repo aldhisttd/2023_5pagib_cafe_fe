@@ -30,7 +30,7 @@ $(document).ready(function () {
                         dataKategori[i].kode +
                         `">Hapus</button>
                                 <button class="btn btn-primary edit-btn">
-                                    <a class="text-light" href="../obat_edit/kategori_edit.php?kode=` +
+                                    <a class="text-light" href="./?page=kategori_edit?kode=` +
                         dataKategori[i].kode +
                         `">Edit</a>
                                 </button>
