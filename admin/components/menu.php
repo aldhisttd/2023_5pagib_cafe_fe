@@ -28,6 +28,12 @@
                     Kategori Baru
                 </a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link py-1" href="?page=kategori_edit">
+                    <i class="fa-solid fa-circle-dot fa-fw"></i>
+                    Kategori Edit
+                </a>
+            </li>
 
         </ul>
 
