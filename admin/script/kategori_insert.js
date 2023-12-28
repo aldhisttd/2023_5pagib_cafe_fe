@@ -1,6 +1,6 @@
 const host =
     'http://localhost' +
-    window.location.pathname.replace('input_kategori.php', '');
+    window.location.pathname.replace('kategori_insert.php', '');
 
 $(document).ready(function () {
     $('#myForm').submit(function (event) {
@@ -10,7 +10,7 @@ $(document).ready(function () {
 
         $.ajax({
             type: 'POST',
-            url: host + 'input.php',
+            url: host + 'kategori_create.php',
             data: formData,
             success: function (response) {
                 console.log(response);
