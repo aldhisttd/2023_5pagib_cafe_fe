@@ -1,24 +1,18 @@
-const host =
-    'http://localhost' +
-    window.location.pathname.replace('kategori_insert.php', '');
-
-$(document).ready(function () {
-    $('#myForm').submit(function (event) {
-        event.preventDefault();
-
-        var formData = $('#myForm').serialize();
-
-        $.ajax({
-            type: 'POST',
-            url: host + 'kategori_create.php',
-            data: formData,
-            success: function (response) {
-                console.log(response);
-                alert('Data berhasil ditambahkan');
-            },
-            error: function (error) {
-                console.error(error);
-            },
-        });
+$("#kategoriInsert").submit(function (e) {
+    e.preventDefault();
+    var formData = new FormData(this);
+    $.ajax({
+      type: "POST",
+      url: host + "kategori_create.php",
+      data: formData,
+      cache: false,
+      contentType: false,
+      processData: false,
+      dataType: "json",
+      success: (result) => {
+        alert(result.msg);
+        location.href = host_fe + "/?page=kategori_data";
+      },
     });
-});
+  });
+  
