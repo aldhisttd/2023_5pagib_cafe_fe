@@ -18,7 +18,6 @@ $(document).ready(function () {
     };
   
     var kode = getUrlParameter("kode");
-  
     // Panggil API untuk membaca data
     $.ajax({
       type: "GET",
@@ -30,7 +29,6 @@ $(document).ready(function () {
       dataType: "json",
       success: function (response) {
         var data = response.body.data;
-  
         $("#kode").val(data.kode);
         $("#nama").val(data.nama);
       },
