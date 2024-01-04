@@ -1,6 +1,7 @@
-$(document).ready(function () {
+$(document).ready(function () { 
     populasiKategori();
-function populasiKategori() {
+    function populasiKategori() {
+
     $.ajax({
         type: "GET",
         url: host + "kategori_read.php", 
@@ -14,7 +15,6 @@ function populasiKategori() {
             var select = $("#kode_kategori");
             // Kosongkan opsi pemilihan sebelum mengisi kembali
             select.empty();
-            
             // Tambahkan opsi pemilihan untuk setiap kategori
             for (var i = 0; i < categories.length; i++) {
                 select.append(`<option value="${categories[i].kode}">${categories[i].nama}</option>`);
