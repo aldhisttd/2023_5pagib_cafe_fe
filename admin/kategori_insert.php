@@ -4,7 +4,7 @@
 
 <div class="row">
     <div class="col">
-        <form id="kategoriCreate">
+        <form id="kategoriInsert">
                 <div class="form-group">
                     <label for="kode">Kode</label>
                     <input type="text" class="form-control" name="kode" id="kode" />
