@@ -21,14 +21,8 @@ $(document).ready(function () {
               "<td>" + dataKategori[i].kode + "</td>" +
               "<td>" + dataKategori[i].nama + "</td>" +
               "<td>" +
-              "<button class='btn btn-danger hapus' value='" +
-              dataKategori[i].kode +
-              "'>Hapus</button>" +
-              "<button class='btn btn-primary'>" +
-              "<a class='text-light' href='?page=kategori_edit&kode=" +
-              dataKategori[i].kode +
-              "'>Edit</a>" +
-              "</button>" +
+              "<button class='btn btn-danger hapus' value='" + dataKategori[i].kode + "'>Hapus</button>" +
+              "<button class='btn btn-primary'>" + "<a class='text-light' href='?page=kategori_edit&kode=" + dataKategori[i].kode + "'>Edit</a>" + "</button>" +
               "</td>" +
               "</tr>"
           );
