@@ -44,7 +44,7 @@ $(document).on("click", "#hapus", function () {
         if (confirm("Yakin ingin hapus data dengan kode=" + kode + "?")) {
             $.ajax({
                 type: "POST",
-                url: host + "obat_delete.php",
+                url: host + "menu_delete.php",
                 data: { kode: kode },
                 dataType: "json",
                 async: true,
