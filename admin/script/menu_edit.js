@@ -15,9 +15,26 @@ $(document).ready(function () {
         return false;
     };
 
-    var kode = getUrlParameter("kode");
+    // menampilkan select kategori
+    $.ajax({
+        type: "GET",
+        url: host + "kategori_read.php",
+        async: true,
+        cache: false,
+        contentType: false,
+        processData: false,
+        dataType: "json",
+        success: function (response) {
+            var kategori = response.body.data;
 
-    // menampilkan data by=id
+            for (var i = 0; i < kategori.length; i++) {
+                $("#kode_kategori").append(`<option value="` + kategori[i].kode + `">` + kategori[i].nama + `</option>`);
+            }
+        },
+    });
+
+    // menampilkan data by kode
+    var kode = getUrlParameter("kode");
     $.ajax({
         type: "GET",
         url: host + "menu_read_one.php?kode=" + kode,
@@ -27,11 +44,10 @@ $(document).ready(function () {
         processData: false,
         dataType: "json",
         success: function (response) {
-            var data = response.body.data[0];
+            var data = response.body.data;
 
             $("#kode").val(data.kode);
             $("#nama").val(data.nama);
-            $("#kategori option[value=" + data.kategori + "]").attr("selected", "selected");
             $("#kode_kategori").val(data.kode_kategori);
             $("#harga").val(data.harga);
         },
@@ -51,6 +67,7 @@ $(document).ready(function () {
             dataType: "json",
             success: function (response) {
                 alert(response.msg);
+                location.href = host_fe + "?page=menu_data";
             },
         });
     });
