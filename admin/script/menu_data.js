@@ -20,7 +20,6 @@ $(document).ready(function () {
                         <td>` + (i + 1) + `</td>
                         <td>` + dataMenu[i].kode + `</td>
                         <td>` + dataMenu[i].nama + `</td>
-                        <td>` + dataMenu[i].kode_kategori + `</td>
                         <td>` + dataMenu[i].nama_kategori + `</td>
                         <td> <img src="` + host + dataMenu[i].gambar + `" width="100" /> </td>
                         <td>` + dataMenu[i].harga + `</td>
