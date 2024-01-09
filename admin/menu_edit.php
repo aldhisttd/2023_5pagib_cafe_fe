@@ -16,7 +16,6 @@
                 <div class="form-group">
                     <label for="gambar">Kode Kategori</label>
                     <select class="form-control" id="kode_kategori" name="kode_kategori">
-                        <option disabled>Pilih</option>
                     </select>
                 </div>
                 <div class="form-group">
