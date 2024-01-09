@@ -10,7 +10,6 @@
                     <th scope="col">No</th>
                     <th scope="col">Kode</th>
                     <th scope="col">Nama</th>
-                    <th scope="col">Kode Kategori</th>
                     <th scope="col">Nama Kategori</th>
                     <th scope="col">Gambar</th>
                     <th scope="col">Harga</th>
