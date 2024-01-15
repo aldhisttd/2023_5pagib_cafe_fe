@@ -11,7 +11,7 @@ $("#kategoriInsert").submit(function (e) {
       dataType: "json",
       success: (result) => {
         alert(result.msg);
-        location.href = host_fe + "/?page=kategori_data";
+        location.href = host_fe + "admin/?page=kategori_data";
       },
     });
   });
