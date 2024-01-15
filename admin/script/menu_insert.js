@@ -28,7 +28,7 @@ $('#menuInsert').submit(function(e){
     var formData = new FormData(this);
     $.ajax({
         type: 'POST',
-        url: host + "menu_input.php",
+        url: host + "menu_create.php",
         data: formData,
         cache: false,
         contentType: false, 
@@ -36,7 +36,7 @@ $('#menuInsert').submit(function(e){
         dataType: 'json',
         success: (result) => {
             alert(result.msg);
-            location.href = host_fe + "/?page=menu_data";
+            location.href = host_fe + "admin/?page=menu_data";
         },
     });
   })
